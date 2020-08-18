@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+
+        <meta charset="utf-8">
+        <title>Campo Minado</title>
+        <link rel="stylesheet" type="text/css" href="estilo.css">
+
+    </head>
+    <body>
+        <header>
+            <h1>Campo Minado</h1>
+            <!--Quantas colunas e linhas-->
+            <input type="number" name="coluna" min="2" max="10" >
+            <input type="number" name="linha" min="2" max="10"  >
+            <!--Rotão começar-->
+            <input type="button" value="Começar"  onclick="function start()">
+            <!--Resetar-->
+            <input type="button" value="Recomeçar">
+            <!--Timer-->
+            <div id="timer">
+                00:00
+            </div>
+
+            
+
+        </header>
+        <section>
+            <div class="container">
+            <span id="00" class="celula" onclick="function clicked()">
+                o
+            </span>
+            <span id="10" class="celula">
+                o
+            </span>
+            
+
+            </div>
+        </section>
+
+    </body>
+
+</html>

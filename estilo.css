@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+section{
+    background-color: green;
+}
+header, section{
+    width: 70%;
+    margin: 0 auto;
+}
+header{
+    background-color: gray;
+    margin-top: 30px;
+}
+.container{
+    padding: 2%;
+    
+}
+.celula{
+    display: inline-block;
+    box-sizing: border-box;
+    width: 10%;
+    height: 10%;
+    background-color: greenyellow;
+    text-align: center;
+    padding: 2%;
+    margin: 1%;
+
+}
+.celula:hover{
+    background-color: rgb(198, 248, 122);
+    border: 1pt solid salmon;
+}
+.celula:visited{
+    background-color: rgb(105, 172, 5);
+}
