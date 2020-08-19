@@ -11,10 +11,13 @@
         <header>
             <h1>Campo Minado</h1>
             <!--Quantas colunas e linhas-->
-            <input type="number" name="coluna" min="2" max="10" >
-            <input type="number" name="linha" min="2" max="10"  >
+            <label for="coluna">Colunas</label>
+            <input id="coluna" type="number" name="coluna" min="2" max="10" onclick="inserirColuna()">
+            
+            <label for="linha">Linhas </label>
+            <input id="linha" type="number" name="linha" min="2" max="10" ondblclick="inserirLinha()" >
             <!--Rotão começar-->
-            <input type="button" value="Começar"  onclick="function start()">
+            <input type="submit" value="Começar" >
             <!--Resetar-->
             <input type="button" value="Recomeçar">
             <!--Timer-->
@@ -37,7 +40,7 @@
 
             </div>
         </section>
-
+    <script src="script.js"></script>
     </body>
 
 </html>
