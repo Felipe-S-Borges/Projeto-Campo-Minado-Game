@@ -13,13 +13,13 @@
             <!--Quantas colunas e linhas-->
             <label for="coluna">Colunas</label>
             <input id="coluna" type="number" name="coluna" min="2" max="10" onclick="inserirColuna()">
-            
+
             <label for="linha">Linhas </label>
-            <input id="linha" type="number" name="linha" min="2" max="10" ondblclick="inserirLinha()" >
+            <input id="linha" type="number" name="linha" min="2" max="10" onclick="inserirLinha()" >
             <!--Rotão começar-->
-            <input type="submit" value="Começar" >
+            <input type="button" value="Começar" onclick="start()" >
             <!--Resetar-->
-            <input type="button" value="Recomeçar">
+            <input type="button" value="Recomeçar" onclick="criarCelula()">
             <!--Timer-->
             <div id="timer">
                 00:00
@@ -28,7 +28,8 @@
             
 
         </header>
-        <section>
+        <section id="canva">
+            <!--
             <div class="container">
             <span id="00" class="celula" onclick="function clicked()">
                 o
@@ -36,7 +37,7 @@
             <span id="10" class="celula">
                 o
             </span>
-            
+            -->
 
             </div>
         </section>
