@@ -8,8 +8,13 @@
 //[x]criar matriz com dados aleatórios
 //[x]Mudar estado para pisado
 //[x]A primeira linha de celulas não se reconhece o id 
+//[x]Detectar pisar na bomba
+//[x]Set game over
+//[x]set Restart
+//[x]permitir somente um único Start
 //[]Restringir a quantidade de numeros 1(bombas)(Dificuldade)
 //[]Calcular minas adjacentes
+
 
 var linhas = 0
 var colunas = 0 
@@ -17,6 +22,9 @@ var level = 0
 var celula = document.getElementById("container")
 var matriz = []
 var elemento = null
+var numeroPisados 
+var numeroLivres
+var NumeroBombas = 0
 
 function inserirLinha(){
 
@@ -34,7 +42,7 @@ function inserirColuna(){
 function inserirLevel(){
 
     level = document.getElementById("level")
-    level = level.value
+    level = level.value * 2
 }
 
 
@@ -45,12 +53,20 @@ function criarCelula(lin,col){
 }
 
 function numberGenerator(level){
+    var numero = Math.round(Math.random())
+    if(numero == 1){
 
-    return Math.round(Math.random())
+        NumeroBombas++
+    }
+    if(NumeroBombas > level){
+        return 0 
+    }
+    return numero
 }
 
 function start(level){
-
+    document.getElementById("container").innerHTML = ""
+    NumeroBombas = 0
     for(var i=0;i<linhas;i++){
         matriz[i] = []
         for(var y=0; y<colunas;y++){
@@ -59,9 +75,23 @@ function start(level){
         }
         celula.innerHTML = celula.innerHTML + "<br>"
     }
+    document.getElementById("start").value = "Restart"
+}
+function contador(){
+        numeroPisados = document.getElementsByClassName("pisado")
+        numeroLivres = document.getElementsByClassName("celula")
 }
 function clicked(identidade){
-    elemento = document.getElementById(identidade.trim())
-    elemento.className = "pisado"
-    console.log(identidade)
+    if(matriz[identidade[0]][identidade[1]] == 1){
+        console.log("game over")
+    }else{
+          elemento = document.getElementById(identidade.trim())
+          elemento.className = "pisado"
+          contador()
+          if(numeroPisados.length  == (linhas*colunas) - NumeroBombas){
+            console.log("End game")
+          }
+          console.log(identidade)
+    }
+    
 }
