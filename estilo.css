@@ -34,6 +34,13 @@ header{
     background-color: rgb(198, 248, 122);
     border: 1pt solid salmon;
 }
-.celula:visited{
+.pisado{
+    display: inline-block;
+    box-sizing: border-box;
+    width: 10%;
+    height: 10%;
+    text-align: center;
+    padding: 2%;
+    margin: 1%;
     background-color: rgb(105, 172, 5);
 }
