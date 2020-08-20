@@ -25,11 +25,13 @@ header, section{
 header{
     background-color: gray;
     margin-top: 30px;
+    border-radius: 4px;
 }
 #container{
-    height: 400px;
+    
     padding: 2%;
     border: 1pt solid red;
+    border-radius: 4px;
     
 }
 .caixa{
@@ -56,6 +58,7 @@ header{
     margin-top: 2%;
     margin-right: 5%;
     padding: 2%;
+    border-radius: 2px;
 }
 #start{
     width: 50%;
@@ -64,26 +67,28 @@ header{
 }
 .celula{
     display: inline-block;
-    box-sizing: border-box;
-    width: 10%;
-    height: 10%;
+    width: 60px;
+    height: 60px;
     background-color: greenyellow;
     text-align: center;
     padding: 2%;
     margin: 1%;
+    border-radius: 2px;
 
 }
 .celula:hover{
     background-color: rgb(198, 248, 122);
-    border: 1pt solid salmon;
+    outline-color: salmon;
+    outline-style: solid;
+    outline-width: 1pt;
 }
 .pisado{
     display: inline-block;
-    box-sizing: border-box;
-    width: 10%;
-    height: 10%;
+    width: 60px;
+    height: 60px;
     text-align: center;
     padding: 2%;
     margin: 1%;
     background-color: rgb(105, 172, 5);
+    border-radius: 2px;
 }
