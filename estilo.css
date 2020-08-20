@@ -14,6 +14,7 @@ h1{
 
 section{
     background-color: green;
+    margin-top: ;
 }
 header, section{
     width: 70%;
@@ -30,23 +31,28 @@ header{
 #container{
     
     padding: 2%;
-    border: 1pt solid red;
+    
     border-radius: 4px;
+    margin: 0 auto;
+    text-align: center;
+    
     
 }
+
 .caixa{
     
     padding: 2% 5%;
-    border: 1pt solid red;
+    
     width: 90%;
     margin: 0 auto;
+    text-align: center;
 }
 .block{
     width: 30%;
     display: inline-block;
 }
 .block input{
-    width: 70%;
+    width: 100%;
 }
 .block label{
     padding: 5%;
@@ -67,13 +73,15 @@ header{
 }
 .celula{
     display: inline-block;
-    width: 60px;
-    height: 60px;
+    width: 40px;
+    height: 40px;
     background-color: greenyellow;
     text-align: center;
     padding: 2%;
     margin: 1%;
     border-radius: 2px;
+    
+    
 
 }
 .celula:hover{
@@ -81,14 +89,16 @@ header{
     outline-color: salmon;
     outline-style: solid;
     outline-width: 1pt;
+    cursor: grab;
 }
 .pisado{
     display: inline-block;
-    width: 60px;
-    height: 60px;
+    background-color: rgb(100, 167, 1);
+    width: 40px;
+    height: 40px;
     text-align: center;
     padding: 2%;
     margin: 1%;
-    background-color: rgb(105, 172, 5);
     border-radius: 2px;
+    
 }
