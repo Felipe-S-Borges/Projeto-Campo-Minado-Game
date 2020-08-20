@@ -3,11 +3,13 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Helvetica, Arial, sans-serif;
+    font-size: 16pt;
 }
 h1{
     text-align: center;
     padding: 2%;
     margin: 0;
+    font-size: 2em;
 }
 
 section{
@@ -17,6 +19,8 @@ header, section{
     width: 70%;
     margin: 0 auto;
     padding: 0;
+    min-width: 525px;
+    max-width: 650px;
 }
 header{
     background-color: gray;
@@ -44,6 +48,7 @@ header{
 }
 .block label{
     padding: 5%;
+    font-size: 0.8em;
 }
 #timer{
     background-color: red;
