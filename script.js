@@ -13,7 +13,8 @@
 //[x]set Restart
 //[x]permitir somente um único Start
 //[]Restringir a quantidade de numeros 1(bombas)(Dificuldade)
-//[]Calcular minas adjacentes
+//[]Embaralhar as posições das minas
+//[x]Calcular minas adjacentes
 
 
 var linhas = 0
@@ -75,7 +76,55 @@ function start(level){
         }
         celula.innerHTML = celula.innerHTML + "<br>"
     }
+    //function embaralhar(){}
     document.getElementById("start").value = "Restart"
+}
+function subMatriz(posição){
+    //Caso clique no meio
+    var inicioX = posição[0] - 1
+    var inicioY = posição[1] - 1
+    var fimX = parseInt(posição[0]) + 1
+    var fimY = parseInt(posição[1]) + 1
+    var cont = 0
+
+    if(inicioX < 0){
+        inicioX = posição[0]
+    }
+    
+    //Caso clique na lateral superior
+    if(inicioY < 0){
+        inicioY = posição[1]
+    }
+    
+    if( fimX > matriz.length - 1 ){
+        fimX = posição[0]
+        
+    }
+
+    if(fimY > matriz[matriz.length - 1].length - 1){
+
+        fimY = posição[1]
+    }
+    
+    for(var i = inicioX; i<= fimX; i++){
+        for(var y = inicioY; y <= fimY; y++){
+            if(matriz[i][y] == 1){
+                cont++
+            }
+        }
+    }
+    
+    
+    
+    
+    /*
+    */
+    console.log(` posição x:${inicioX}`)
+    console.log(` posição y:${inicioY}`)
+    console.log(` fim x:${fimX}`)
+    console.log(` fim y:${fimY}`)
+    console.log(` cont:${cont}`)
+    return cont
 }
 function contador(){
         numeroPisados = document.getElementsByClassName("pisado")
@@ -84,6 +133,7 @@ function contador(){
 function clicked(identidade){
     if(matriz[identidade[0]][identidade[1]] == 1){
         console.log("game over")
+        subMatriz(identidade)
     }else{
           elemento = document.getElementById(identidade.trim())
           elemento.className = "pisado"
@@ -91,7 +141,10 @@ function clicked(identidade){
           if(numeroPisados.length  == (linhas*colunas) - NumeroBombas){
             console.log("End game")
           }
+          document.getElementById(identidade).innerHTML = subMatriz(identidade)
+          
           console.log(identidade)
+
     }
     
 }
