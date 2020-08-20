@@ -49,7 +49,7 @@ function inserirLevel(){
 
 function criarCelula(lin,col){
     var id = lin.toString().concat(col.toString())
-    celula.innerHTML = celula.innerHTML + `<span id="${id}" class="celula" onclick="clicked('${id}')" > o </span>`
+    celula.innerHTML = celula.innerHTML + `<span id="${id}" class="celula" onclick="clicked('${id}')" > &#128550; </span>`
 
 }
 

@@ -9,24 +9,32 @@
     </head>
     <body>
         <header>
+            <div id="timer">
+                Time:<spa id="tempo" >00:00</spa>
+            </div>
             <h1>Campo Minado</h1>
             <!--Quantas colunas e linhas-->
-            <label for="coluna">Colunas</label>
+            <div class="caixa" >
+            <div class="block">
+            <label for="coluna">Nº de Colunas</label><br>
             <input id="coluna" type="number" name="coluna" min="2" max="8" onclick="inserirColuna()">
-
-            <label for="linha">Linhas </label>
-            <input id="linha" type="number" name="linha" min="2" max="7" onclick="inserirLinha()" >
-
-            <label for="level">Level </label>
-            <input id="level" type="number" name="level" min="1" max="5" onclick="inserirLevel()" >
-            <!--Botão começar-->
-            <input id="start" type="button" value="Começar" onclick="start()" >
-            <!--Resetar
-            <input type="button" value="Recomeçar" onclick="criarCelula()">-->
-            <!--Timer-->
-            <div id="timer">
-                00:00
             </div>
+
+            <div class="block">
+            <label for="linha">Nº de Linhas </label><br>
+            <input id="linha" type="number" name="linha" min="2" max="7" onclick="inserirLinha()" >
+            </div>
+
+            <div class="block">
+            <label for="level">Level </label><br>
+            <input id="level" type="number" name="level" min="1" max="5" onclick="inserirLevel()" >
+            </div>
+            </div>
+            <!--Botão começar-->
+            <div class="caixa">
+            <input id="start" type="button" value="Começar" onclick="start()" >
+            </div>
+            
 
             
 

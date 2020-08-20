@@ -1,7 +1,13 @@
 *{
     margin: 0;
     padding: 0;
-
+    box-sizing: border-box;
+    font-family: Helvetica, Arial, sans-serif;
+}
+h1{
+    text-align: center;
+    padding: 2%;
+    margin: 0;
 }
 
 section{
@@ -10,12 +16,44 @@ section{
 header, section{
     width: 70%;
     margin: 0 auto;
+    padding: 0;
 }
 header{
     background-color: gray;
     margin-top: 30px;
 }
-.container{
+#container{
+    height: 400px;
+    padding: 2%;
+    border: 1pt solid red;
+    
+}
+.caixa{
+    
+    padding: 2% 5%;
+    border: 1pt solid red;
+    width: 90%;
+    margin: 0 auto;
+}
+.block{
+    width: 30%;
+    display: inline-block;
+}
+.block input{
+    width: 70%;
+}
+.block label{
+    padding: 5%;
+}
+#timer{
+    background-color: red;
+    float: right;
+    margin-top: 2%;
+    margin-right: 5%;
+    padding: 2%;
+}
+#start{
+    width: 50%;
     padding: 2%;
     
 }
