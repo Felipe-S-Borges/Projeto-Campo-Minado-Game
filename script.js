@@ -136,6 +136,9 @@ function clicked(identidade){
     if(matriz[identidade[0]][identidade[1]] == 1){
         console.log("game over")
         subMatriz(identidade)
+        document.getElementById(identidade).innerHTML = `<i class="fa fa-bomb"></i>`
+        elemento = document.getElementById(identidade.trim())
+        elemento.className = "explodido"
     }else{
           elemento = document.getElementById(identidade.trim())
           elemento.className = "pisado"
