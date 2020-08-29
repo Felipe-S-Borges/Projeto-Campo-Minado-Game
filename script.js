@@ -15,6 +15,8 @@
 //[]Restringir a quantidade de numeros 1(bombas)(Dificuldade)
 //[]Embaralhar as posições das minas
 //[x]Calcular minas adjacentes
+//[]Timer
+
 
 
 var linhas = 0
@@ -26,6 +28,7 @@ var elemento = null
 var numeroPisados 
 var numeroLivres
 var NumeroBombas = 0
+
 
 function inserirLinha(){
 
@@ -45,7 +48,19 @@ function inserirLevel(){
     level = document.getElementById("level")
     level = level.value * 2
 }
+function time(){
+    var segundos = document.getElementById("sec").innerHTML
+    var minutos = document.getElementById("min").innerHTML
 
+    if(segundos < 59){
+        segundos++
+        document.getElementById("sec").innerHTML = segundos
+    }else{
+        minutos++
+        document.getElementById("min").innerHTML=minutos
+        document.getElementById("sec").innerHTML="00"
+    }
+}
 
 function criarCelula(lin,col){
     var id = lin.toString().concat(col.toString())
@@ -68,6 +83,7 @@ function numberGenerator(level){
 }
 
 function start(level){
+    setInterval(time(),1000)//??
     document.getElementById("container").innerHTML = ""
     NumeroBombas = 0
     for(var i=0;i<linhas;i++){
@@ -80,6 +96,7 @@ function start(level){
     }
     //function embaralhar(){}
     document.getElementById("start").value = "Restart"
+    
 }
 function subMatriz(posição){
     //Caso clique no meio
@@ -145,6 +162,7 @@ function clicked(identidade){
           contador()
           if(numeroPisados.length  == (linhas*colunas) - NumeroBombas){
             console.log("End game")
+            clearInterval()
           }
           document.getElementById(identidade).innerHTML = subMatriz(identidade)
           
