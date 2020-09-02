@@ -85,6 +85,7 @@ function numberGenerator(level){
 function start(level){
     setInterval(time(),1000)//??
     document.getElementById("container").innerHTML = ""
+    document.getElementById("container").style.width = `${((colunas-1)*10)}%`                      
     NumeroBombas = 0
     for(var i=0;i<linhas;i++){
         matriz[i] = []

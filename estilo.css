@@ -31,10 +31,12 @@ header{
 #container{
     
     padding: 2%;
-
+    display: flex;
+    flex-wrap: wrap;
     border-radius: 4px;
     margin: 0 auto;
     text-align: center;
+    width: 50%;
     
     
 }
