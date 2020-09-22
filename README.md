@@ -1,4 +1,4 @@
-# http://Projeto-Campo-Minado-Game
+# https://felipelee22.github.io/Projeto-Campo-Minado-Game/
 
 Objetivos: 
 
